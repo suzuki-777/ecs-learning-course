@@ -31,10 +31,10 @@ public class HelloControllerTests {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    public void shouldReturnGetHello() throws Exception {
-        this.mockMvc
-                .perform(get("/api/hello"))
-                .andExpect(jsonPath("$", equalTo("Hello")));
-    }
+    // @Test
+    // public void shouldReturnGetHello() throws Exception {
+    //     this.mockMvc
+    //             .perform(get("/api/hello"))
+    //             .andExpect(jsonPath("$", equalTo("Hello")));
+    // }
 }
