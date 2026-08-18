@@ -35,6 +35,7 @@ jobs:
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: arn:aws:iam::568098465792:role/ecsTask
+          role-session-name: GitHubActionsTestSession
           # role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME
 
       - name: Login to Amazon ECR
