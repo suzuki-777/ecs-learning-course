@@ -35,6 +35,8 @@ jobs:
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-session-name: GitHubActions
+          role-duration-seconds: 3600
 
       - name: Login to Amazon ECR
         id: login-ecr
