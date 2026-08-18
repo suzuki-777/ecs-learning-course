@@ -68,7 +68,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-to-assume: arn:aws:iam::568098465792:role/githubActionsEcs
 
       - name: Download the artifact
         uses: actions/download-artifact@v8
