@@ -30,12 +30,11 @@ jobs:
       - name: Run Tests and Build an Image
         run: docker image build -t temp_api_image:latest .
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v6
-        with:
-          aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: arn:aws:iam::568098465792:role/ecsTask
-          role-session-name: GitHubActionsTestSession
+      # - name: Configure AWS credentials
+      #   uses: aws-actions/configure-aws-credentials@v6
+      #   with:
+      #     aws-region: ${{ env.AWS_REGION 
+      #     role-to-assume: arn:aws:iam::568098465792:role/ecsTask
           # role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME
 
       - name: Login to Amazon ECR
